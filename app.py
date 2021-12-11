@@ -20,7 +20,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/cenkg/OneDrive/Masaüs
 db = SQLAlchemy(app)
 
 
-API_KEY = "ee08b234b27f042a2c802f7776e54c8d"
+API_KEY = "<SECRET>"
 
 BASE_API_URL = "https://api.openweathermap.org/data/2.5/weather?q=" #Bu sabit 
 
