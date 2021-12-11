@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="banner">
+  <h1>Breath the weather !</h1>
+</div>
+<br><br><br>
+
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Şehir</th>
+        <th scope="col">Sıcaklık</th>
+        <th scope="col">Basınç</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{name}}</th>
+        <td>{{temp}}</td>
+        <td>{{pressure}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a href="/" type="button" class="float-right" style="margin-right: 50px;">Geri Dön</a>
+
+  {% endblock %}

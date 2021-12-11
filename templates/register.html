@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+
+<link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+{% endblock %}
+
+{% block body %}
+
+{% from "_formhelpers.html" import render_field %}
+<div class="bannerlog">
+    <h1>Breath the weather !</h1>
+</div>
+
+<br><br>
+
+<h2 style="text-align: center;">Kayıt Ol </h2> 
+
+
+<div class="container" style="text-align: center;">
+<div class="container">
+<form method="post">
+    
+    {{ render_field(form.username)}}
+    {{ render_field(form.password)}}
+
+    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+
+</form>
+<br>
+<a href="/login">Hesabım Var</a>
+
+</div>
+</div>
+
+
+
+{% endblock %}
